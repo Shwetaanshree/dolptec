@@ -1,0 +1,439 @@
+
+@media screen and (max-width: 512px) {
+   .content {
+      margin: 0 0%;
+      margin-top: 0%;
+   }
+   .tabcontent.active{max-height: fit-content !important;}
+   .flex-row{ display: block;}
+   .service-sec ul li {
+      list-style-type: disc;
+      margin: 0px 15px !important;
+      font-size: 14px;
+      line-height: 21px;
+  }
+   .tabcontent.active{
+      padding: 0rem !important;
+   }
+   .tabcontent h4{
+      font-size: 16px;
+   }
+   .tabcontent h5{
+      font-size: 15px;
+   }
+}
+
+.tabs {
+   margin: 0;
+   background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 90px;
+   border-radius: 2px 2px 0 0;
+   overflow: hidden;
+}
+
+@media screen and (max-width: 512px) {
+   .tabs {
+      height: 40px;
+      display: block;
+   }
+   .tablinks {
+      width: 100%;
+   }
+   .tabcontent .hero-feature-img{display: none !important;}
+
+}
+
+.tablinks {
+   background: transparent;
+   background-image: linear-gradient(90deg, transparent 70%, rgba(255, 255, 255, 0.2) 100%);
+   border: none;
+   outline: none;
+   cursor: pointer;
+   width: 25%;
+   height: 90px;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 16px;
+   overflow: hidden;
+   transition: 0.3s ease;
+}
+
+@media screen and (max-width: 512px) {
+   .tablinks {
+      height: 40px;
+      font-size: 12px;
+      width: 100%;
+   }
+   .tablinks.active {
+      height: 40px;
+      width: 100%;
+   }
+   
+}
+
+.tablinks::before {
+   background-image: linear-gradient(135deg, #16a571 0%, #164343 100%);
+   content: "";
+   width: 100%;
+   height: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   transition: 0.3s ease-in-out;
+   z-index: 2;
+}
+
+.tablinks:hover::before {
+   height: 100%;
+   z-index: 2;
+   bottom: 0;
+}
+
+@media screen and (max-width: 512px) {
+   .tablinks:hover::before {
+      height: 0;
+   }
+}
+
+.tablinks.active {
+   background-image: linear-gradient(135deg, #16a571 0%, #164343 100%);
+   z-index: 0;
+   border-right: 0;
+   border-left: 0;
+   height: 90px;
+   bottom: 0;
+   overflow: hidden;
+}
+
+.tablinks p.active {
+   color: #fff;
+}
+
+@media screen and (max-width: 512px) {
+   .tablinks.active {
+      height: 60px;
+   }
+   .tabcontent{
+      margin-top: 70% !important;
+   }
+}
+
+.tablinks.active::before {
+   content: "";
+   width: 100%;
+   height: 5px;
+   top: 0;
+   left: 0;
+}
+
+.tablinks.active p,
+.tablinks.active:hover p {
+   opacity: 1;
+   font-size: 16px;
+   color: #fff;
+}
+
+.tablinks p {
+   opacity: 0.6;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 2;
+  
+   padding: 0;
+   margin: 0;
+   color: #000;
+   backface-visibility: hidden;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 20px;
+}
+
+.tablinks:hover p {
+   color: white;
+   opacity: 1;
+}
+
+@media screen and (max-width: 512px) {
+   .tablinks:hover p {
+      color: #686868;
+      opacity: 0.6;
+   }
+}
+
+.tablinks p::before {
+   content: attr(data-title);
+   position: absolute;
+   height: auto;
+   width: auto;
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 0.1;
+   font-size: 40px;
+   /* transition: 1s ease-out; */
+   z-index: -1;
+   font-weight: 600;
+   top: 110%;
+}
+
+@media screen and (max-width: 512px) {
+   .tablinks p::before {
+      display: none;
+   }
+}
+
+.tablinks:hover p::before {
+   opacity: 0.1;
+   font-size: 40px;
+   top: -80%;
+}
+
+.wrapper_tabcontent {
+   margin-top: 0;
+   z-index: 1;
+   position: relative;
+   opacity: 1;
+   padding: 40px 20px;
+   overflow: hidden;
+   transition: all 1s ease;
+   top: 0;
+   background: #fff;
+}
+
+.tabcontent.active {
+   display: block;
+   max-height: fit-content; /* Adjust as needed for content height */
+   padding: 3rem; /* Adjusted for final state */
+   /* transition: max-height 0.5s ease-in, padding 0.5s ease-in; */
+}
+
+/* .tabcontent {
+   min-height: 180px;
+   background: #fff;
+   padding: 0 20px; /* Adjusted for initial state *
+   border: 1px solid #dfdfdf;
+   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
+   margin-top: 0;
+   display: none;
+   max-height: 0; /* Initially hide the content *
+   overflow: hidden;
+   transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+} */
+
+.tabcontent{
+   display: none;
+   padding: 0 12px;
+   border: 0px solid #dfdfdf !important;
+   
+   max-height: 0;
+   overflow: hidden;
+   /* transition: max-height 0.5s ease-out, padding 0.5s ease-out; */
+}
+
+.tabcontent.show {
+   max-height: fit-content; /* Adjust based on your content */
+   padding: 6px 12px;
+}
+
+
+
+.tabcontent.active {
+   /* transition: all 1s ease; */
+   display: block;
+}
+
+.wrapper_tabcontent::after {
+   content: "";
+   height: 5px;
+   width: 100%;
+   position: absolute;
+   background-image: linear-gradient(135deg, #164343 0%, #16a571 100%);
+   left: 0;
+   bottom: 0;
+   z-index: -2;
+   transition: all 1s ease;
+}
+
+.tabcontent h3 {
+   font-size: 40px;
+   top: 75px;
+   transform: rotate(90deg);
+   position: absolute;
+   left: -90px;
+   opacity: 0.1;
+   width: 200px;
+   height: 137px;
+   background: -webkit-linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+   -webkit-text-fill-color: transparent;
+   padding: 0;
+   /* animation: city 1s ease; */
+   display: none;
+}
+
+@media screen and (max-width: 512px) {
+   .tabcontent h3 {
+      top: 65px;
+   }
+}
+
+/* @keyframes city {
+   from {
+      left: -150px;
+   }
+   to {
+      left: -90px;
+   }
+} */
+
+.tabcontent p {
+   color: #686868;
+   margin: 0;
+   padding: 0;
+   line-height: 28px;
+   font-weight: 100;
+   transition: all 1s ease;
+   /* animation: fadeEffect 0.6s ease; */
+   width: 100%;
+   font-size: 16px;
+}
+
+@media screen and (max-width: 512px) {
+   .tabcontent p {
+      font-size: 14px;
+      line-height: 26px;
+   }
+}
+
+.service-sec ul li {
+    list-style-type: disc;
+    margin: 0 35px;
+}
+
+.service-sec ol li {
+    list-style-type: decimal;
+}
+
+.service-sec h5 {
+    margin-bottom: 20px;
+}
+
+/* VERTICAL TABS CSS */
+#vertical-row .anon-services img{max-width: 100%;}
+.tab-vertical {
+   float: left;
+   border: 1px solid #ccc;
+   background-color: #f1f1f1;
+   width: 30%;
+   height: fit-content;
+}
+
+.tab-vertical button {
+   display: block;
+   background-color: inherit;
+   color: black;
+   padding: 10px 16px;
+   width: 100%;
+   border: none;
+   outline: none;
+   text-align: left;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.tab-vertical button:hover {
+   background-color: #ddd;
+}
+
+.tab-vertical button.active {
+   background-image: linear-gradient(135deg, #16a571 0%, #164343 100%);
+   color: #fff;
+}
+
+.tabcontent-v {
+   float: left;
+   width: 70%;
+   height: fit-content;
+   display: none;
+   background: #fff;
+   padding: 1rem;
+   border: 1px solid #dfdfdf;
+   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+}
+
+/* Adjust for small screens */
+@media screen and (max-width: 768px) {
+   .tab-vertical {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+   }
+
+   .tabcontent-v {
+      width: 100%;
+      float: none;
+      height: fit-content;
+   }
+}
+
+@media screen and (max-width: 512px) {
+   .tab-vertical {
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      margin-right: 20px;
+  }
+   .tab-vertical button{
+      font-size: 12px;
+      padding: 10px;
+   }
+   #vertical-row{
+      display: flex !important;
+   }
+   .tabcontent-v h3{
+      font-size: 16px !important;
+   }
+   #vertical-row .col-lg-2 {
+      width: 45.666667%;
+      margin-bottom: 20px !important;
+  }
+  #non-native{display: none !important;}
+  .tab-vertical{display: none !important;}
+  #technology {display: none !important;}
+  #technology-mobile{display: block;}
+  #mobile-vertical-row .aon-servi-icon img{max-width: 100% !important;}
+#mobile-vertical-row .aon-servi-box {
+  padding: 0px;
+  text-align: center;
+  border: 0px solid #afafaf;
+  box-shadow: none;
+  margin: 0px 0px;
+  transform: perspective(120px) rotateX(0deg);
+  min-height: fit-content;
+}
+#mobile-vertical-row .anon-services .col-lg-2 {
+  width: 19.666667%;
+  margin-bottom: 0rem !important;
+}
+
+#mobile-vertical-row .mb-5{
+  margin-bottom: 0rem !important;
+}
+#mobile-vertical-row .col-lg-2 {
+   width: 32.666667% !important;
+}
+}

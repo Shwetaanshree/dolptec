@@ -1,0 +1,204 @@
+<!-- load all css -->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Dolptec</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.html" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/custom-animate.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/flaticon_itco.css" />
+    <link rel="stylesheet" href="assets/css/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/preloader.css" />
+    <link rel="stylesheet" href="assets/css/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/css/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/css/odometer.css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/owl-carousel.css" />
+    <link rel="stylesheet" href="assets/css/progressBar.min.css" />
+
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!--Testimonial css-->
+    <link href="assets/css/testimonial.css" rel="stylesheet">
+    <link href="assets/css/tab-section.css" rel="stylesheet">
+
+
+    <link href="assets/css/pop-up-custom.css" rel="stylesheet">
+    <style>
+        
+        /* Style for the popup */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+        /* Popup content */
+        .popup-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 5% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            max-width: 500px;
+        }
+        /* Close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Style for the form */
+        .contact-form1 {
+            color: green;
+        }
+        .contact-form1 input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        .contact-form1 .submit-button-wrapper {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Trigger/Open The Popup -->
+    <button id="download-brochure">Download Brochure</button>
+
+    <!-- The Popup -->
+    <div id="popup" class="popup">
+        <!-- Popup content -->
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <form method="post" class="contact-form1">
+                <h5 class="title">Book your free consultation today !!</h5>
+                <div>
+                    <input type="text" class="form-control rounded border-white mb-3 form-input" id="name" placeholder="Name" required>
+                </div>
+                <div>
+                    <input type="email" class="form-control rounded border-white mb-3 form-input" placeholder="Email" required>
+                </div>
+                <div>
+                    <input type="phone" class="form-control rounded border-white mb-3 form-input" placeholder="Phone" required>
+                </div>
+                <div class="submit-button-wrapper">
+                    <input type="submit" id="submit-form" value="submit" hidden />
+                </div>
+            </form>
+            <button id="submit-form-button">Submit</button>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.circleType.js"></script>
+    <script src="assets/js/jquery.lettering.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.odometer.min.js"></script>
+    <script src="assets/js/jquery-sidebar-content.js"></script>
+    <script src="assets/js/nouislider.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/countfect.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/noframework.waypoints.min.js"></script>
+    <script src="assets/js/progressBar.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/tab-section.js"></script>
+    <script>
+        // Get the popup
+        var popup = document.getElementById("popup");
+
+        // Get the button that opens the popup
+        var btn = document.getElementById("download-brochure");
+
+        // Get the <span> element that closes the popup
+        var span = document.getElementsByClassName("close")[0];
+
+        // Get the submit form button
+        var submitFormButton = document.getElementById("submit-form-button");
+
+        // When the user clicks on the button, open the popup
+        btn.onclick = function() {
+            popup.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the popup
+        span.onclick = function() {
+            popup.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the popup, close it
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        }
+
+        // Handle form submission
+        submitFormButton.addEventListener("click", (event) => {
+            // Prevent default button action
+            event.preventDefault();
+
+            // Get form element
+            const form = document.querySelector("form");
+
+            // Check if form is valid
+            if (form.checkValidity()) {
+                // Create and click hidden submit button to trigger form submission
+                document.querySelector("#submit-form").click();
+
+                // Create anchor element for PDF download
+                let element = document.createElement("a");
+                element.href = "./GFG.pdf";
+                element.download = "GFG.pdf";
+
+                // Append to the body, trigger click and remove element
+                document.body.appendChild(element);
+                element.click();
+                document.body.removeChild(element);
+
+                // Close the popup
+                popup.style.display = "none";
+            } else {
+                // If form is not valid, display validation errors
+                form.reportValidity();
+            }
+        });
+    </script>
+</body>
+</html>

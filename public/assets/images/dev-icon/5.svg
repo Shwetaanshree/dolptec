@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+	<title>Secure_Purple-svg</title>
+	<defs>
+		<image width="32" height="32" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAABQ5JREFUWIXll1tsVVUQhr855/QCKoEoQihUxMpFQnig0HNaIqkBHiBRBAEJRDEgigEkakIiIsbEhERACF7CgzyAEMD4IGoDKmkM7V6bcjGEm4VGkDuiUIxiobS/D2dzek7Pbi1EExP/tz1rzcy/Zs/MmgX/d9gdaTktx5iFUGDFED5xxmPW/E8SzIYUwameSuVnyD0dYrf63665SLurvkbitJRKdW2RUYhxgXJryNhr1NJECwHJcJqIU8mdEXCaiNgI3E8e+9IMDQKOZu0Xx7CAQI164tgOzAM242lauwcNde70E54GAuBrDE6n8bQWpzqcZmbpJKN1FqePcDqNr9eQDE9FOJ3oOAlPIzKc30KNeuJpHrs1tB3dAny9hKchreRFOJ3E19jWKtlV4PQsxgTi9mSokyoNIMYsxFigT2DjNPANxjridqQNcm9j5JGwReni7BxoYCOiZ1aY9yoHX+8R5VvgMs3MQPSmgV4Y04CfEdtxWsNh5Wbo+hqG8TxNfBBKLoRtEZ7O4ako5dzTDnxtolJ3t6l3QHfhaT2edlKhvJTM6Ri+xoWphFdBqdUR4ROMSQA0sgLjEiVMp9x+b5PAUPuDUnsG4xTdWAVAAyUY54lbRZhKZg746kETAzAeBl7HmEyU6zRRQQ6DKLZrbFWUQpYjTpOwlQA4zUcM4DoLKbebVCqffI4SYQJRjtPIj4jZwPeU2tnwCHjagdhDhCUYw4BXSdh+mpgDrKbYrgHQm8XATES/NDt9iTCdfJYCBE1qJc3ModiuIWZizMXYha8rOK3JjEOF8vB1JTSsTkdTuXBYuThdwGkRnt5P27MCp8U4XUy16Go9gFNdlr296ozTJXx1aYlAJwzR1iVSwBlOAHCVQuAiohbjcTy9gNNsYCJQB5whnwcBKOUU0AMpM8+SEWmkkWgLgbYgGWBMDm69XOoR3UnwOTAB41FgNM1MIWFbgPvIoT7DxqcduXFv/YKkw0w4Hcepb+rb13ehbdXXJHx5qe8q9cLpZKg/T+fYpW4AMQDG2XU8fYHPrzjVAoeBbSRsG8ZOYBzwYaA+F2MHvmLEbUNAcipiOaKl1qOMD3STfcWYihgQXFi/MJKr0LoM96ozjQwkeeMtI8YobnAvETbRhcEMthsAVGs4EdaRsCGBgz1EeYUS2xXYyeEmB2niOc5SQx9qgc3AQcQxcjlEsTW2ROAWkqW2H9iP02gaKafMPsaT4zdWAPODnZezwmppskaWYeynzBy79RjNnCFhb4T9jfAkrNZwYAwxvgIglxeBEjytolKxUB2ASsXw9C5Qzp/MCaQnEP2pUmHHCFTpHqJsAOYywi4Aych0phyjO/kcJMJTWLKMAsQQT5DPAYxCmhiVatkldgJ4hygb2apoa3fZWe9rSbLUbEHoKZ3KMOYjHgduBB0kD6OCCKtTeZAOyfD5ErGFUlufvhQWzqPADDwVZPTtKvUiQhnGDuL2NJAs305Yaj6sVAynEnI4mGrdAHvoAfTDuBR6qCwkO1wtngqCU0/F0zmcPsPpfJAjmahWIpik9uBUl9pTo544HcHXyx1z3pqE00acDuDrkUC+MEi0TDhtSA0xvsYGM+Sbf+e87VZcamsRCxAeDZSkjVo/pKbfTAxC7AMgbl+TwwiMrsBbxG11hw7dIVTrIZwy577kY+Vqagq6Ddz+00yK4LMX6Jr2NMvB8InblH+fQJKEUUXLa+kmotzq29H47+IvWDNZ+CJBo5YAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		.s0 { fill: #ffffff } 
+	</style>
+	<g id="Layer_1-2">
+		<g id="Layer">
+			<path id="Layer" class="s0" d="m30 60c-16.6 0-30-13.4-30-30 0-16.6 13.4-30 30-30 16.6 0 30 13.4 30 30 0 16.6-13.4 30-30 30z"/>
+		</g>
+		<use id="maintenance" href="#img1" transform="matrix(1,0,0,1,14,14)"/>
+	</g>
+</svg>

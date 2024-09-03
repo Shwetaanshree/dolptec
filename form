@@ -1,0 +1,82 @@
+<form action="{{ route('enquires') }}" method="POST" class="contact-form"
+                                        id="home-enquire-form">
+                                        {!! csrf_field() !!}
+
+                                        @if (Session::has('error'))
+                                        <div class="alert alert-danger">
+                                            {{ Session::get('error') }}
+                                        </div>
+                                        @endif
+
+                                        @if (Session::has('success'))
+                                        <div class="alert alert-success">
+                                            {{ Session::get('success') }}
+                                        </div>
+                                        @endif
+
+                                        <!-- Add this section to display validation errors for each form field -->
+                                        @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                        @endif
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <input class="form-control rounded border-white mb-3 form-input" form-control" id="name" name="name"
+                                                        placeholder="Name" type="text" required>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <input class="form-control rounded border-white mb-3 form-input form-control" id="email1" name="email"
+                                                        placeholder="Corporate Email ID" type="text" required>
+                                                    <span class="error-message" id="emailError1"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <input class="form-control rounded border-white mb-3 form-input form-control m-width" type="tel" id="phone1"
+                                                        name="phone" placeholder="Phone Number">
+                                                    <span class="error-message" id="phoneError1"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                            <select class="form-control rounded border-white mb-3 form-input form-control" id="city" name="city" style="height: 50px;" required="">
+                                            <option disabled="" selected="" value="">Select a Service</option>  
+                                            <option value="cloud-consulting">Cloud Consulting Services</option>
+                                            <option value="cloud-migration">Cloud Migration</option>
+                                            <option value="cloud-landing-zone">Cloud Landing Zone Service</option>
+                                            <option value="DevOps Services">DevOps Services</option>                    
+                                            <option value="architecture-services">Architecture Services</option>
+                                            <option value="finops-services">FinOps Services</option>
+                                            <option value="IT Support">Cloud/IT Support</option>
+                                                   </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-group comments">
+                                                    <textarea class="rounded border-white mb-3 form-text-area form-control" id="aboutProject" name="aboutProject"
+                                                        placeholder="Message"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12" style="text-align:center;">
+                                                <button type="submit" name="submit" id="submit1"
+                                                    class="thm-btn contact-form-button">
+                                                    <span class="txt">Submit</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Tabs with Slide Down Animation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Lato", sans-serif;
+        }
+        /* Horizontal Tabs CSS */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: background-color 0.3s;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 0 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+        }
+        .tabcontent.show {
+            max-height: 200px; /* Adjust based on your content */
+            padding: 6px 12px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Horizontal Tabs -->
+<div class="tab">
+    <button class="tablinks" onmouseover="openCity(event, 'FinOps')">Financial Operations</button>
+    <button class="tablinks" onmouseover="openCity(event, 'HR')">Human Resources</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Marketing')">Marketing</button>
+</div>
+
+<div id="FinOps" class="tabcontent">
+    <h3>Financial Operations</h3>
+    <p>Content for Financial Operations tab.</p>
+</div>
+
+<div id="HR" class="tabcontent">
+    <h3>Human Resources</h3>
+    <p>Content for Human Resources tab.</p>
+</div>
+
+<div id="Marketing" class="tabcontent">
+    <h3>Marketing</h3>
+    <p>Content for Marketing tab.</p>
+</div>
+
+<script>
+    // Horizontal Tabs Functionality
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            tabcontent[i].classList.remove("show");
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+        var tabContentElement = document.getElementById(cityName);
+        tabContentElement.style.display = "block";
+        setTimeout(function() {
+            tabContentElement.classList.add("show");
+        }, 5); // Slight delay to trigger the transition
+        evt.currentTarget.classList.add("active");
+    }
+
+    // Make the first horizontal tab active on page load
+    document.addEventListener("DOMContentLoaded", function() {
+        var firstTab = document.getElementsByClassName("tablinks")[0];
+        firstTab.classList.add("active");
+        var firstTabContent = document.getElementById("FinOps");
+        firstTabContent.style.display = "block";
+        setTimeout(function() {
+            firstTabContent.classList.add("show");
+        }, 5);
+    });
+</script>
+
+</body>
+</html>
