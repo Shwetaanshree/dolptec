@@ -348,7 +348,7 @@
                     <div id="banner-txt" class="col-lg-6">
                         <div class="hero-content">
                             <!--<span class="sec-sub-title ">IT solutions for the new era</span>-->
-                            <h1 class="hero-title text-white">Cloud Consulting Services test</h1>
+                            <h1 class="hero-title text-white">Cloud Consulting Services</h1>
                             <p class="text-white sub-title">From initial cloud exploration to long-term optimization,
                                 our expert consultants deliver tailored solutions that ensure your cloud transformation
                                 is seamless and successful.
